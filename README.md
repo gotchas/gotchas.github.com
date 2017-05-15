@@ -15,3 +15,11 @@ sudo apt-get update
 sudo apt-get install gcc-7
 ```
 note how here document can be redirected to a file with root priviledges: pipe to a `tee -a` command run by root
+### [preparation on ubuntu to build gcc from source code tarball](https://help.ubuntu.com/community/CompilingEasyHowTo)
+
+```bash
+sudo apt-get install build-essential checkinstall
+sudo apt-get install cvs subversion git-core mercurial
+sudo chown $USER /usr/local/src
+sudo chmod u+rwx /usr/local/src
+```
