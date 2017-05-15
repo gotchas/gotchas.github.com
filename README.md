@@ -5,7 +5,7 @@
 
 ```bash
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo cat  <<- LEADING_TABS_IGNORED >> /etc/apt/preferences
+sudo cat <<- LEADING_TABS_IGNORED >> /etc/apt/preferences
 Package: gcc-7
 Pin: release n=zesty
 Pin-Priority: 990
