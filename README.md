@@ -4,8 +4,8 @@
 
 
 ```bash
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo cat <<- LEADING_TABS_IGNORED >> /etc/apt/preferences
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo cat <<- LEADING_TABS_IGNORED  | sudo tee -a /etc/apt/preferences
 Package: gcc-7
 Pin: release n=zesty
 Pin-Priority: 990
@@ -14,3 +14,4 @@ sudo cat /etc/apt/preferences
 sudo apt-get update
 sudo apt-get install gcc-7
 ```
+note how here document can be redirected to a file with root priviledges: pipe to a `tee -a` command run by root
